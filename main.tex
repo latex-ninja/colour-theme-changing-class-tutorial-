@@ -1,0 +1,67 @@
+% ---------------------------------------------------------------------------
+% If you want to use your custom .cls file, don't forget to add it here
+% in the documentclass declaration. In {} is the name of the class
+% in [] are the options.
+% Available in this document are 'blue' and 'red'. Try them out!
+% ---------------------------------------------------------------------------
+\documentclass[blue]{myColourChangingArticle}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\title{Tutorial: How to make a colour theme changing \texttt{.cls}}
+\author{\LaTeX{} Ninja}
+\date{March 2020}
+
+% ---------------------------------------------------------------------------
+% I just fancied using a different font.
+% Use the option 'familydefault' only if the base font of the document 
+% is to be sans serif.
+% ---------------------------------------------------------------------------
+\usepackage[familydefault,light]{Chivo}
+
+% ---------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\section{Introduction}
+
+% ---------------------------------------------------------------------------
+% Testing some colour options.
+% Go to myColourChangingArticle.cls to inspect what's going on.
+%% ---------------------------------------------------------------------------
+\colorbox{headercolour}{Testing a colorbox with a custom colour.}
+
+\bigskip
+
+
+\colorbox{headercolour}{
+\color{customlight} The dark font on the dark background wasn't very readable, didn't you think? 
+}
+
+\begin{center}
+    \color{alternativecolour} Testing more colours.
+\end{center}
+
+
+{
+\bf\color{customcolour}\MakeUppercase{We can create some dramatic effects}
+}
+\color{customcolour}{with colours.}
+
+
+\begin{center}
+    \color{myblue} Testing more colours.
+
+    \color{mypurple} Testing more colours.
+\end{center}
+
+{
+\bf\color{customcolour}\MakeUppercase{Also don't forget testing the class options by switching to red!}
+}
+
+\end{document}
+
+
+
+
+
+
